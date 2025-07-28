@@ -60,3 +60,61 @@ aside {
   background: #e9eef6;
   border-left: 1px solid #c3d0e6;
 }
+
+header {
+  background: #2a5d84;
+  color: #fff;
+  padding: 16px 0 8px 0;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(42,93,132,0.08);
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header a {
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+header a:hover {
+  color: #ffeb3b;
+}
+
+footer {
+  background: #2a5d84;
+  color: #fff;
+  text-align: center;
+  padding: 12px 0;
+  margin-top: 30px;
+  box-shadow: 0 -2px 8px rgba(42,93,132,0.08);
+}
+footer a {
+  color: #ffeb3b;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(42,93,132,0.05);
+}
+th, td {
+  border: 1px solid #c3d0e6;
+  padding: 10px 16px;
+  text-align: left;
+}
+th {
+  background: #e9eef6;
+  color: #2a5d84;
+}
+tr:nth-child(even) {
+  background: #f7fafd;
+}
