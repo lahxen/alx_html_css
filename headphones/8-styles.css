@@ -1,0 +1,680 @@
+/* Service Icon Styles */
+.icon-sound,
+.icon-video, 
+.icon-music,
+.icon-hearing {
+    font-size: 94px;
+    line-height: 1;
+    display: block;
+    width: 94px;
+    height: 94px;
+    text-align: center;
+    color: #FF6565;
+    transition: transform 0.4s cubic-bezier(.25,1.7,.45,.87), color 0.3s;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+    color: #071629;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Header Styles */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 28px 0;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo img {
+    height: 32px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 41px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: lowercase;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #FF6565;
+}
+
+/* Enhanced Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    z-index: 1001;
+}
+
+.hamburger:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hamburger span {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+/* Hamburger Animation States */
+.hamburger.active span:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.hamburger.active span:last-child {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/headphones_hero_1.jpg') center center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 637px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    line-height: 1.25;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 38px;
+    line-height: 1.25;
+}
+
+.cta-button {
+    background: #FF6565;
+    color: white;
+    border: none;
+    padding: 13px 31px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 65px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Loading button animation */
+.cta-button.loading {
+    pointer-events: none;
+}
+
+.cta-button .button-text {
+    display: inline-block;
+    transition: opacity 0.3s ease;
+}
+
+.cta-button.loading .button-text {
+    opacity: 0;
+}
+
+.cta-button .button-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: none;
+    transition: opacity 0.3s ease;
+}
+
+.cta-button.loading .button-loader {
+    opacity: 1;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.hero-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.625;
+    max-width: 637px;
+    margin: 0 auto;
+}
+
+/* What We Do Section with Animations */
+.what-we-do {
+    padding: 110px 0;
+    text-align: center;
+    background: white;
+}
+
+.what-we-do h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #071629;
+}
+
+.section-description {
+    font-size: 16px;
+    line-height: 1.625;
+    max-width: 637px;
+    margin: 0 auto 96px auto;
+    color: #071629;
+    text-align: center;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 58px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-item {
+    text-align: center;
+    max-width: 207px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 16px;
+    transition: transform 0.4s cubic-bezier(.25,1.7,.45,.87), box-shadow 0.3s;
+    will-change: transform;
+    animation: bounceIn 1.2s cubic-bezier(.25,1.7,.45,.87) both;
+}
+
+.service-item:hover {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(255,101,101,0.15);
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.7) translateY(60px);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-10px);
+    }
+    80% {
+        transform: scale(0.98) translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.service-icon {
+    margin-bottom: 20px;
+    height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon span {
+    font-size: 94px;
+    color: #FF6565;
+    line-height: 1;
+    display: block;
+    width: 94px;
+    height: 94px;
+    text-align: center;
+    transition: transform 0.4s cubic-bezier(.25,1.7,.45,.87), color 0.3s;
+}
+
+.service-item:hover .service-icon span {
+    transform: scale(1.18) rotate(8deg);
+    color: #ff2e2e;
+}
+
+.service-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: #071629;
+}
+
+.service-item p {
+    font-size: 14px;
+    line-height: 1.625;
+    color: #071629;
+}
+
+/* Our Results Section with Animations */
+.our-results {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/headphones_hero_2.jpg') center center/cover no-repeat;
+    padding: 110px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.our-results h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.our-results .section-description {
+    color: white;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 58px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.result-item {
+    text-align: center;
+    max-width: 190px;
+    margin: 0 auto;
+    transition: transform 0.4s cubic-bezier(.25,1.7,.45,.87);
+    will-change: transform;
+    animation: fadeInUp 1.2s cubic-bezier(.25,1.7,.45,.87) both;
+}
+
+.result-item:hover {
+    transform: scale(1.10) rotate(2deg);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    80% {
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result-icon {
+    width: 190px;
+    height: 190px;
+    margin: 0 auto 14px auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-icon::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 190px;
+    height: 190px;
+    background: #FF6565;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    transition: filter 0.3s;
+    filter: drop-shadow(0 4px 24px rgba(255,101,101,0.12));
+}
+
+.result-item:hover .result-icon::before {
+    filter: drop-shadow(0 8px 32px rgba(255,101,101,0.25));
+}
+
+.result-number {
+    font-size: 46px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.4s cubic-bezier(.25,1.7,.45,.87);
+}
+
+.result-item:hover .result-number {
+    transform: scale(1.15) rotate(-4deg);
+}
+
+.result-description {
+    font-size: 14px;
+    line-height: 1.625;
+    color: white;
+    margin: 0;
+}
+
+/* Contact Us Section */
+.contact-us {
+    padding: 110px 0;
+    text-align: center;
+    background: white;
+}
+
+.contact-us h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 56px;
+    color: #071629;
+}
+
+.contact-form {
+    max-width: 335px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.form-group {
+    margin-bottom: 45px;
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #071629;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: 600;
+    background: transparent;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom-color: #FF6565;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(255, 101, 101, 0.2);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #071629;
+    font-weight: 600;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+    font-family: inherit;
+}
+
+.error-message {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    font-size: 12px;
+    color: #ff4757;
+    font-weight: 600;
+    display: none;
+}
+
+.success-message {
+    display: none;
+    background: #2ed573;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* Footer */
+.footer {
+    background: #071629;
+    color: white;
+    padding: 50px 0 39px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    height: 32px;
+    width: auto;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-links a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+.social-links a img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.copyright {
+    font-size: 12px;
+    opacity: 0.35;
+    margin: 0;
+}
+
+.developer-signature {
+    font-size: 12px;
+    opacity: 0.7;
+    margin: 8px 0 0 0;
+    color: #FF6565;
+    text-align: center;
+}
+
+.developer-signature strong {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #071629;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+    
+    .nav-menu a {
+        font-size: 16px;
+        padding: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-menu a:hover {
+        background-color: rgba(255, 101, 101, 0.1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .hero-subtitle {
+        font-size: 14px;
+    }
+    
+    .services,
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .what-we-do,
+    .our-results,
+    .contact-us {
+        padding: 60px 0;
+    }
+    
+    .service-icon span {
+        font-size: 70px;
+        width: 70px;
+        height: 70px;
+    }
+    
+    .result-icon {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .result-icon::before {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .result-number {
+        font-size: 30px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .contact-form {
+        padding: 0 20px;
+    }
+}

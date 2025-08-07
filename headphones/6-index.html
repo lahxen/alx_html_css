@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headphones</title>
+    <link rel="stylesheet" href="6-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo_headphones.png" alt="Headphones Logo">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#what-we-do">what we do</a></li>
+                    <li><a href="#our-results">our results</a></li>
+                    <li><a href="#contact-us">contact us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Lorem Ipsum dolor set amet lorem ipsum</h1>
+            <p class="hero-subtitle">Lorem ipsum dolor set amet lorem ipsum dolor set</p>
+            <button class="cta-button">CALL TO ACTION</button>
+            <p class="hero-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section id="what-we-do" class="what-we-do">
+        <div class="container">
+            <h2>What we do...</h2>
+            <p class="section-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <div class="services">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <span class="holberton_school-icon-ic_sound"></span>
+                    </div>
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <span class="holberton_school-icon-ic_video"></span>
+                    </div>
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <span class="holberton_school-icon-ic_music"></span>
+                    </div>
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <span class="holberton_school-icon-ic_hearing"></span>
+                    </div>
+                    <h3>Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Results Section with CSS-drawn Pentagons -->
+    <section id="our-results" class="our-results">
+        <div class="container">
+            <h2>Our results speak for themselves</h2>
+            <p class="section-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-icon">
+                        <div class="pentagon">
+                            <h3 class="result-number">+2%</h3>
+                        </div>
+                    </div>
+                    <p class="result-description">Lorem ipsum dolor</p>
+                </div>
+                <div class="result-item">
+                    <div class="result-icon">
+                        <div class="pentagon">
+                            <h3 class="result-number">+2%</h3>
+                        </div>
+                    </div>
+                    <p class="result-description">Lorem ipsum dolor</p>
+                </div>
+                <div class="result-item">
+                    <div class="result-icon">
+                        <div class="pentagon">
+                            <h3 class="result-number">+2%</h3>
+                        </div>
+                    </div>
+                    <p class="result-description">Lorem ipsum dolor</p>
+                </div>
+                <div class="result-item">
+                    <div class="result-icon">
+                        <div class="pentagon">
+                            <h3 class="result-number">+2%</h3>
+                        </div>
+                    </div>
+                    <p class="result-description">Lorem ipsum dolor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Contact Us Section -->
+    <section id="contact-us" class="contact-us">
+        <div class="container">
+            <h2>Contact us</h2>
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name" class="sr-only">Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder="Name" 
+                        required 
+                        minlength="2"
+                        maxlength="50"
+                        autocomplete="name"
+                    >
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="sr-only">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Email" 
+                        required 
+                        autocomplete="email"
+                    >
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="sr-only">Your message</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        placeholder="Your message" 
+                        required 
+                        minlength="10"
+                        maxlength="500"
+                        rows="4"
+                    ></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+                <button type="submit" class="cta-button">
+                    <span class="button-text">CALL TO ACTION</span>
+                    <span class="button-loader"></span>
+                </button>
+                <div class="success-message" id="successMessage">
+                    Thank you! Your message has been sent successfully.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo_headphones.png" alt="Headphones Logo">
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Follow us on Facebook">
+                        <img src="images/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="#" aria-label="Follow us on Twitter">
+                        <img src="images/twitter.png" alt="Twitter">
+                    </a>
+                    <a href="#" aria-label="Follow us on Instagram">
+                        <img src="images/instagram.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p class="copyright">©headphones 2020</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced Contact Form JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+            const submitButton = form.querySelector('.cta-button');
+            const successMessage = document.getElementById('successMessage');
+
+            // Real-time validation
+            nameInput.addEventListener('blur', validateName);
+            emailInput.addEventListener('blur', validateEmail);
+            messageInput.addEventListener('blur', validateMessage);
+
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (validateForm()) {
+                    showLoading();
+                    // Simulate form submission
+                    setTimeout(() => {
+                        hideLoading();
+                        showSuccess();
+                        form.reset();
+                    }, 2000);
+                }
+            });
+
+            function validateName() {
+                const name = nameInput.value.trim();
+                const errorElement = document.getElementById('nameError');
+                
+                if (name.length < 2) {
+                    showError(nameInput, errorElement, 'Name must be at least 2 characters long');
+                    return false;
+                } else if (name.length > 50) {
+                    showError(nameInput, errorElement, 'Name must be less than 50 characters');
+                    return false;
+                } else {
+                    clearError(nameInput, errorElement);
+                    return true;
+                }
+            }
+
+            function validateEmail() {
+                const email = emailInput.value.trim();
+                const errorElement = document.getElementById('emailError');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                
+                if (!emailRegex.test(email)) {
+                    showError(emailInput, errorElement, 'Please enter a valid email address');
+                    return false;
+                } else {
+                    clearError(emailInput, errorElement);
+                    return true;
+                }
+            }
+
+            function validateMessage() {
+                const message = messageInput.value.trim();
+                const errorElement = document.getElementById('messageError');
+                
+                if (message.length < 10) {
+                    showError(messageInput, errorElement, 'Message must be at least 10 characters long');
+                    return false;
+                } else if (message.length > 500) {
+                    showError(messageInput, errorElement, 'Message must be less than 500 characters');
+                    return false;
+                } else {
+                    clearError(messageInput, errorElement);
+                    return true;
+                }
+            }
+
+            function validateForm() {
+                const isNameValid = validateName();
+                const isEmailValid = validateEmail();
+                const isMessageValid = validateMessage();
+                
+                return isNameValid && isEmailValid && isMessageValid;
+            }
+
+            function showError(input, errorElement, message) {
+                input.classList.add('error');
+                errorElement.textContent = message;
+                errorElement.style.display = 'block';
+            }
+
+            function clearError(input, errorElement) {
+                input.classList.remove('error');
+                errorElement.textContent = '';
+                errorElement.style.display = 'none';
+            }
+
+            function showLoading() {
+                submitButton.classList.add('loading');
+                submitButton.disabled = true;
+            }
+
+            function hideLoading() {
+                submitButton.classList.remove('loading');
+                submitButton.disabled = false;
+            }
+
+            function showSuccess() {
+                successMessage.style.display = 'block';
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+            }
+        });
+    </script>
+</body>
+</html>

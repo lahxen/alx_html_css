@@ -1,0 +1,164 @@
+/* ...existing code for base, header, hero, etc... */
+
+/* What We Do Section Animations */
+.services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 58px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-item {
+    text-align: center;
+    max-width: 207px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    transition: transform 0.4s cubic-bezier(.25,1.7,.45,.87), box-shadow 0.3s;
+    will-change: transform;
+    animation: bounceIn 1.2s cubic-bezier(.25,1.7,.45,.87) both;
+}
+
+.service-item:hover {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(255,101,101,0.15);
+    z-index: 2;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.7) translateY(60px);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-10px);
+    }
+    80% {
+        transform: scale(0.98) translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.service-icon span {
+    font-size: 94px;
+    color: #FF6565;
+    line-height: 1;
+    display: block;
+    width: 94px;
+    height: 94px;
+    text-align: center;
+    transition: transform 0.4s cubic-bezier(.25,1.7,.45,.87), color 0.3s;
+}
+
+.service-item:hover .service-icon span {
+    transform: scale(1.18) rotate(8deg);
+    color: #ff2e2e;
+}
+
+/* Our Results Section Animations */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 58px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.result-item {
+    text-align: center;
+    max-width: 190px;
+    margin: 0 auto;
+    transition: transform 0.4s cubic-bezier(.25,1.7,.45,.87), box-shadow 0.3s;
+    will-change: transform;
+    animation: fadeInUp 1.2s cubic-bezier(.25,1.7,.45,.87) both;
+}
+
+.result-item:hover {
+    transform: scale(1.10) rotate(2deg);
+    box-shadow: 0 8px 32px rgba(255,101,101,0.15);
+    z-index: 2;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    80% {
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result-icon {
+    width: 190px;
+    height: 190px;
+    margin: 0 auto 14px auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* CSS Pentagon */
+    background: none;
+}
+
+.result-icon::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 190px;
+    height: 190px;
+    background: #FF6565;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    transition: filter 0.3s;
+    filter: drop-shadow(0 4px 24px rgba(255,101,101,0.12));
+}
+
+.result-item:hover .result-icon::before {
+    filter: drop-shadow(0 8px 32px rgba(255,101,101,0.25));
+}
+
+.result-number {
+    font-size: 46px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.4s cubic-bezier(.25,1.7,.45,.87);
+}
+
+.result-item:hover .result-number {
+    transform: scale(1.15) rotate(-4deg);
+}
+
+.result-description {
+    font-size: 14px;
+    line-height: 1.625;
+    color: white;
+    margin: 0;
+    transition: opacity 0.3s;
+}
+
+.result-item:hover .result-description {
+    opacity: 0.85;
+}
+
+/* ...existing code for contact, footer, responsive, etc... */

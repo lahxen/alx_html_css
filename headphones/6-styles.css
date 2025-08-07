@@ -1,0 +1,911 @@
+/* Import Custom Font Icons */
+@font-face {
+    font-family: 'holberton_school-icon';
+    src: url('fonts/holberton_school-icon.eot?sq4eq4');
+    src: url('fonts/holberton_school-icon.eot?sq4eq4#iefix') format('embedded-opentype'),
+         url('fonts/holberton_school-icon.ttf?sq4eq4') format('truetype'),
+         url('fonts/holberton_school-icon.woff?sq4eq4') format('woff'),
+         url('fonts/holberton_school-icon.svg?sq4eq4#holberton_school-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'holberton_school-icon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.holberton_school-icon-ic_sound:before {
+    content: "\e90e";
+}
+.holberton_school-icon-ic_video:before {
+    content: "\e910";
+}
+.holberton_school-icon-ic_music:before {
+    content: "\e90d";
+}
+.holberton_school-icon-ic_hearing:before {
+    content: "\e909";
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+    color: #071629;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Header Styles */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 28px 0;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 32px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 41px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: lowercase;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #FF6565;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/headphones_hero_1.jpg') center center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 637px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    line-height: 1.25;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 38px;
+    line-height: 1.25;
+}
+
+.cta-button {
+    background: #FF6565;
+    color: white;
+    border: none;
+    padding: 13px 31px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 65px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Loading button animation */
+.cta-button.loading {
+    pointer-events: none;
+}
+
+.cta-button .button-text {
+    display: inline-block;
+    transition: opacity 0.3s ease;
+}
+
+.cta-button.loading .button-text {
+    opacity: 0;
+}
+
+.cta-button .button-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: none;
+    transition: opacity 0.3s ease;
+}
+
+.cta-button.loading .button-loader {
+    opacity: 1;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.hero-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.625;
+    max-width: 637px;
+    margin: 0 auto;
+}
+
+/* Reusable Components - Section Styling */
+.section-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section-description {
+    font-size: 16px;
+    line-height: 1.625;
+    max-width: 637px;
+    margin: 0 auto 96px auto;
+    text-align: center;
+}
+
+/* Grid Component - Reusable for services and results */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 58px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    text-align: center;
+    max-width: 207px;
+    margin: 0 auto;
+}
+
+/* What We Do Section - Using Reusable Components */
+.what-we-do {
+    padding: 110px 0;
+    text-align: center;
+    background: white;
+}
+
+.what-we-do h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #071629;
+}
+
+.what-we-do .section-description {
+    color: #071629;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 58px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-item {
+    text-align: center;
+    max-width: 207px;
+    margin: 0 auto;
+}
+
+.service-icon {
+    margin-bottom: 20px;
+    height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Enhanced Font Icon Styles */
+.service-icon span {
+    font-size: 94px;
+    color: #FF6565;
+    line-height: 1;
+    display: block;
+    width: 94px;
+    height: 94px;
+    text-align: center;
+}
+
+/* Individual icon positioning adjustments if needed */
+.holberton_school-icon-ic_sound:before {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.holberton_school-icon-ic_video:before {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.holberton_school-icon-ic_music:before {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.holberton_school-icon-ic_hearing:before {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.service-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: #071629;
+}
+
+.service-item p {
+    font-size: 14px;
+    line-height: 1.625;
+    color: #071629;
+}
+
+/* Our Results Section - Enhanced with CSS-drawn Pentagons */
+.our-results {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/headphones_hero_2.jpg') center center/cover no-repeat;
+    padding: 110px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.our-results h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.our-results .section-description {
+    color: white;
+}
+
+/* Results Grid - Reusing grid component pattern */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 58px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.result-item {
+    text-align: center;
+    max-width: 190px;
+    margin: 0 auto;
+}
+
+/* Result Icon Container */
+.result-icon {
+    width: 190px;
+    height: 190px;
+    margin: 0 auto 14px auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CSS-drawn Pentagon */
+.pentagon {
+    width: 190px;
+    height: 190px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(0deg);
+}
+
+.pentagon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform: translateX(-50%);
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 45px solid #FF6565;
+}
+
+.pentagon::after {
+    content: '';
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    width: 120px;
+    height: 75px;
+    transform: translateX(-50%);
+    background: #FF6565;
+    clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
+}
+
+.result-number {
+    font-size: 46px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.result-description {
+    font-size: 14px;
+    line-height: 1.625;
+    color: white;
+    margin: 0;
+}
+
+/* Enhanced Contact Us Section */
+.contact-us {
+    padding: 110px 0;
+    text-align: center;
+    background: white;
+}
+
+.contact-us h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 56px;
+    color: #071629;
+}
+
+.contact-form {
+    max-width: 335px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.form-group {
+    margin-bottom: 45px;
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #071629;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: 600;
+    background: transparent;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom-color: #FF6565;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(255, 101, 101, 0.2);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+    border-bottom-color: #ff4757;
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #071629;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.form-group input:focus::placeholder,
+.form-group textarea:focus::placeholder {
+    opacity: 0.7;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+    font-family: inherit;
+}
+
+/* Enhanced Form Validation */
+.error-message {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    font-size: 12px;
+    color: #ff4757;
+    font-weight: 600;
+    display: none;
+    animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Success Message */
+.success-message {
+    display: none;
+    background: #2ed573;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: 600;
+    animation: slideInDown 0.5s ease-out;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Validation States */
+.form-group input:valid:not(:placeholder-shown),
+.form-group textarea:valid:not(:placeholder-shown) {
+    border-bottom-color: #2ed573;
+}
+
+/* Hover Effects */
+.form-group input:hover,
+.form-group textarea:hover {
+    border-bottom-color: #FF6565;
+}
+
+/* Enhanced Footer */
+.footer {
+    background: #071629;
+    color: white;
+    padding: 50px 0 39px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    flex-shrink: 0;
+}
+
+.footer-logo img {
+    height: 32px;
+    width: auto;
+    transition: opacity 0.3s ease;
+}
+
+.footer-logo img:hover {
+    opacity: 0.8;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-links a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-links a:focus {
+    outline: 2px solid #FF6565;
+    outline-offset: 2px;
+}
+
+.social-links a img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    transition: filter 0.3s ease;
+}
+
+.social-links a:hover img {
+    filter: brightness(1.2);
+}
+
+.footer-copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.copyright {
+    font-size: 12px;
+    opacity: 0.35;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Desktop and Tablet Responsive */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .services,
+    .results-grid {
+        gap: 40px;
+    }
+}
+
+/* Tablet Responsive */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .hero-subtitle {
+        font-size: 14px;
+    }
+    
+    /* Responsive grids - affects both services and results */
+    .services,
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    
+    .what-we-do,
+    .our-results,
+    .contact-us {
+        padding: 60px 0;
+    }
+    
+    .what-we-do h2,
+    .our-results h2,
+    .contact-us h2 {
+        font-size: 28px;
+    }
+    
+    /* Mobile icon adjustments */
+    .service-icon span {
+        font-size: 80px;
+        width: 80px;
+        height: 80px;
+    }
+    
+    /* Mobile pentagon adjustments */
+    .result-icon {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .pentagon {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .pentagon::before {
+        border-left: 47px solid transparent;
+        border-right: 47px solid transparent;
+        border-bottom: 35px solid #FF6565;
+    }
+    
+    .pentagon::after {
+        top: 35px;
+        width: 94px;
+        height: 60px;
+    }
+    
+    .result-number {
+        font-size: 36px;
+    }
+    
+    /* Mobile contact form */
+    .contact-form {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    /* Enhanced Footer for Tablet */
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .social-links a img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .services,
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .hero {
+        padding: 0 15px;
+        height: 90vh;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero h1 {
+        font-size: 24px;
+    }
+    
+    /* Small screen icon adjustments */
+    .service-icon span {
+        font-size: 70px;
+        width: 70px;
+        height: 70px;
+    }
+    
+    /* Small screen pentagon adjustments */
+    .result-icon {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .pentagon {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .pentagon::before {
+        border-left: 38px solid transparent;
+        border-right: 38px solid transparent;
+        border-bottom: 28px solid #FF6565;
+    }
+    
+    .pentagon::after {
+        top: 28px;
+        width: 76px;
+        height: 48px;
+    }
+    
+    .result-number {
+        font-size: 30px;
+    }
+    
+    .contact-form {
+        padding: 0 10px;
+    }
+    
+    /* Enhanced Mobile Footer */
+    .footer {
+        padding: 40px 0 30px 0;
+    }
+    
+    .footer-content {
+        margin-bottom: 30px;
+        gap: 25px;
+    }
+    
+    .footer-logo img {
+        height: 28px;
+    }
+    
+    .social-links {
+        gap: 25px;
+    }
+    
+    .social-links a img {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .copyright {
+        font-size: 11px;
+    }
+    
+    .what-we-do,
+    .our-results,
+    .contact-us {
+        padding: 50px 0;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+    .hero h1 {
+        font-size: 20px;
+    }
+    
+    .hero-subtitle {
+        font-size: 12px;
+    }
+    
+    .what-we-do h2,
+    .our-results h2,
+    .contact-us h2 {
+        font-size: 24px;
+    }
+    
+    .social-links {
+        gap: 20px;
+    }
+    
+    .social-links a img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    /* Extra small pentagon adjustments */
+    .result-icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .pentagon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .pentagon::before {
+        border-left: 32px solid transparent;
+        border-right: 32px solid transparent;
+        border-bottom: 24px solid #FF6565;
+    }
+    
+    .pentagon::after {
+        top: 24px;
+        width: 64px;
+        height: 40px;
+    }
+    
+    .result-number {
+        font-size: 24px;
+    }
+}

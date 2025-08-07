@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headphones</title>
+    <link rel="stylesheet" href="8-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo_headphones.png" alt="Headphones Logo">
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#what-we-do">what we do</a></li>
+                    <li><a href="#our-results">our results</a></li>
+                    <li><a href="#contact-us">contact us</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Premium Headphones for Every Lifestyle</h1>
+            <p class="hero-subtitle">Experience sound like never before with our cutting-edge audio technology</p>
+            <button class="cta-button">DISCOVER OUR COLLECTION</button>
+            <p class="hero-description">
+                Immerse yourself in crystal-clear audio with our professional-grade headphones. Whether you're a music enthusiast, content creator, or casual listener, our innovative designs deliver exceptional sound quality, comfort, and durability that exceed your expectations.
+            </p>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section id="what-we-do" class="what-we-do">
+        <div class="container">
+            <h2>What we do...</h2>
+            <p class="section-description">
+                We are passionate about delivering exceptional audio experiences through innovative headphone technology. Our team of audio engineers and designers work tirelessly to create products that combine superior sound quality, ergonomic comfort, and cutting-edge features to enhance every moment of your listening journey.
+            </p>
+            <div class="services">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <span class="icon-sound">🔊</span>
+                    </div>
+                    <h3>High-Quality Sound</h3>
+                    <p>Experience crystal-clear audio with our premium sound technology. Our advanced drivers deliver rich bass and crisp treble for an immersive listening experience that brings your music to life.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <span class="icon-video">🎬</span>
+                    </div>
+                    <h3>Video Content</h3>
+                    <p>Perfect for multimedia consumption with seamless audio-video synchronization. Enjoy movies, gaming, and streaming content with perfectly balanced sound that enhances every visual moment.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <span class="icon-music">🎵</span>
+                    </div>
+                    <h3>Music Production</h3>
+                    <p>Designed for musicians and audio professionals who demand precision. Our headphones provide accurate sound reproduction and wide frequency response ideal for mixing, mastering, and creative work.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <span class="icon-hearing">👂</span>
+                    </div>
+                    <h3>Hearing Protection</h3>
+                    <p>Advanced noise cancellation and volume limiting technology protect your hearing while delivering exceptional audio quality. Safe listening without compromising on sound excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Results Section -->
+    <section id="our-results" class="our-results">
+        <div class="container">
+            <h2>Our results speak for themselves</h2>
+            <p class="section-description">
+                Through years of research, development, and customer feedback, we've achieved remarkable milestones in audio innovation. Our commitment to excellence has earned us industry recognition and the trust of millions of satisfied customers worldwide who choose our headphones for their superior performance.
+            </p>
+            <div class="results-grid">
+                <div class="result-item">
+                    <div class="result-icon">
+                        <h3 class="result-number">95%</h3>
+                    </div>
+                    <p class="result-description">Customer Satisfaction</p>
+                </div>
+                <div class="result-item">
+                    <div class="result-icon">
+                        <h3 class="result-number">50k+</h3>
+                    </div>
+                    <p class="result-description">Units Sold Globally</p>
+                </div>
+                <div class="result-item">
+                    <div class="result-icon">
+                        <h3 class="result-number">24/7</h3>
+                    </div>
+                    <p class="result-description">Technical Support</p>
+                </div>
+                <div class="result-item">
+                    <div class="result-icon">
+                        <h3 class="result-number">3-Year</h3>
+                    </div>
+                    <p class="result-description">Warranty Coverage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Contact Us Section -->
+    <section id="contact-us" class="contact-us">
+        <div class="container">
+            <h2>Contact us</h2>
+            <p class="section-description">
+                Ready to experience premium audio quality? Get in touch with our team of audio experts who are here to help you find the perfect headphones for your needs. We're committed to providing exceptional customer service and support.
+            </p>
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name" class="sr-only">Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder="Name" 
+                        required 
+                        minlength="2"
+                        maxlength="50"
+                        autocomplete="name"
+                    >
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="sr-only">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Email" 
+                        required 
+                        autocomplete="email"
+                    >
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="sr-only">Your message</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        placeholder="Your message" 
+                        required 
+                        minlength="10"
+                        maxlength="500"
+                        rows="4"
+                    ></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+                <button type="submit" class="cta-button">
+                    <span class="button-text">SEND MESSAGE</span>
+                    <span class="button-loader"></span>
+                </button>
+                <div class="success-message" id="successMessage">
+                    Thank you! Your message has been sent successfully.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo_headphones.png" alt="Headphones Logo">
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Follow us on Facebook">
+                        <img src="images/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="#" aria-label="Follow us on Twitter">
+                        <img src="images/twitter.png" alt="Twitter">
+                    </a>
+                    <a href="#" aria-label="Follow us on Instagram">
+                        <img src="images/instagram.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p class="copyright">©headphones 2020</p>
+                <p class="developer-signature">Developed by <strong>LAHCEN BIL</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="8-script.js"></script>
+</body>
+</html>
