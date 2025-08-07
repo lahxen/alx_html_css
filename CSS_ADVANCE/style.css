@@ -549,7 +549,7 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 48px;
+    font-size: 60px;
   }
   
   .hero-keywords {
