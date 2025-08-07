@@ -3,60 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Advanced</title>
+  <meta name="author" content="BIL LAHCEN">
+  <meta name="description" content="SmileSchool - Learn professional smile techniques from expert instructors">
+  <title>CSS Advanced - SmileSchool by BIL LAHCEN</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="hero-header">
     <div class="hero-bg"></div>
     <div class="hero-bar">
-      <img src="https://fakeimg.pl/80x80?text=Logo" alt="Logo" class="hero-logo" />
+      <div class="logo-section">
+        <img src="./images/logo.png" alt="SmileSchool Logo" class="logo-img" />
+      </div>
       <nav class="main-nav">
         <ul>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Pricing</a></li>
+          <li><a href="#">COURSES</a></li>
+          <li><a href="#">PRICING</a></li>
+          <li><a href="#">LOGIN</a></li>
         </ul>
       </nav>
     </div>
-    <h1 class="hero-title">Welcome to CSS Advanced</h1>
+    
+    <div class="hero-content">
+      <h1 class="hero-title">Get schooled</h1>
+      <div class="hero-keywords">
+        <span>SMILES</span>
+        <span>GRIN</span>
+        <span>LAUGH</span>
+      </div>
+      <button class="hero-button">REGISTER FOR FREE</button>
+    </div>
+    
+    <div class="hero-bottom">
+      <h2 class="learn-text">Learn from the pros</h2>
+      <div class="pros-list">
+        <div class="pro-item">
+          <img src="./images/1.png" alt="Philip Massey" />
+          <div class="pro-info">
+            <h3>Philip Massey</h3>
+            <p>« Smile of the year »<br>2018 - 2019</p>
+          </div>
+        </div>
+        <div class="pro-item">
+          <img src="./images/2.png" alt="Nannie Lawrence" />
+          <div class="pro-info">
+            <h3>Nannie Lawrence</h3>
+            <p>Best « little smile »<br>2017</p>
+          </div>
+        </div>
+        <div class="pro-item">
+          <img src="./images/3.png" alt="Bruce Walters" />
+          <div class="pro-info">
+            <h3>Bruce Walters</h3>
+            <p>Best « Friend Smile »<br>live performance 2019</p>
+          </div>
+        </div>
+        <div class="pro-item">
+          <img src="./images/4.png" alt="Henry Hughes" />
+          <div class="pro-info">
+            <h3>Henry Hughes</h3>
+            <p>« 24h smiles » winner<br>2016 - 2019</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
-
-  <h2 class="profiles-title">Meet the Pros</h2>
-  <section class="profiles">
-    <div class="profile">
-      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Youssef" />
-      <div class="profile-info">
-        <h2>Youssef El Amrani</h2>
-        <p>Master of the Chebakia Smile</p>
-      </div>
-    </div>
-    <div class="profile">
-      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Fatima" />
-      <div class="profile-info">
-        <h2>Fatima Zahra Bennis</h2>
-        <p>Can make you laugh even in a traffic jam!</p>
-      </div>
-    </div>
-    <div class="profile">
-      <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="Omar" />
-      <div class="profile-info">
-        <h2>Omar Bouzid</h2>
-        <p>Invented the Couscous Grin</p>
-      </div>
-    </div>
-    <div class="profile">
-      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Khadija" />
-      <div class="profile-info">
-        <h2>Khadija El Fassi</h2>
-        <p>Her smile is as sweet as Moroccan mint tea</p>
-      </div>
-    </div>
-  </section>
 
   <section class="quote-section">
     <div class="quote-content">
-      <img class="quote-img" src="https://randomuser.me/api/portraits/men/32.jpg" alt="testimonial" />
+      <img class="quote-img" src="./images/5.png" alt="testimonial" />
       <div class="quote-text">
         <blockquote>« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun!</blockquote>
         <h3 class="quote-author">Youssef El Amrani</h3>
@@ -67,29 +82,147 @@
 
   <!-- Videos List Section -->
   <section class="videos-section">
-    <h2 class="videos-title">Most Popular Tutorials</h2>
+    <h2 class="videos-title">Most <span class="highlight">popular</span> tutorials</h2>
     <div class="videos-list">
       <div class="video-card">
-        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Video 1" class="video-thumb" />
-        <h3 class="video-name">How to Smile Like a Pro</h3>
-        <p class="video-desc">Learn the secrets to a perfect smile in this fun tutorial.</p>
+        <div class="video-thumb-container">
+          <img src="./images/6.png" alt="Video 1" class="video-thumb" />
+          <img src="./images/play.png" alt="Play" class="play-button" />
+        </div>
+        <h3 class="video-title">Diagonal Smile</h3>
+        <p class="video-desc">Master the art of creating authentic diagonal smiles that captivate and charm.</p>
+        <div class="author-info">
+          <img src="./images/1.png" alt="Author" class="author-img" />
+          <span class="author-name">Phillip Massey</span>
+        </div>
+        <div class="video-rating">
+          <img src="./images/rating.png" alt="Rating" class="rating-stars" />
+          <span class="duration">8 min</span>
+        </div>
       </div>
       <div class="video-card">
-        <img src="https://img.youtube.com/vi/9bZkp7q19f0/hqdefault.jpg" alt="Video 2" class="video-thumb" />
-        <h3 class="video-name">Chebakia Smile Masterclass</h3>
-        <p class="video-desc">Youssef shares his tips for mastering the Chebakia Smile.</p>
+        <div class="video-thumb-container">
+          <img src="./images/7.png" alt="Video 2" class="video-thumb" />
+          <img src="./images/play.png" alt="Play" class="play-button" />
+        </div>
+        <h3 class="video-title">Sad Smile</h3>
+        <p class="video-desc">Learn to express genuine emotion through subtle smile techniques and expressions.</p>
+        <div class="author-info">
+          <img src="./images/2.png" alt="Author" class="author-img" />
+          <span class="author-name">Nannie Lawrence</span>
+        </div>
+        <div class="video-rating">
+          <img src="./images/rating.png" alt="Rating" class="rating-stars" />
+          <span class="duration">8 min</span>
+        </div>
       </div>
       <div class="video-card">
-        <img src="https://img.youtube.com/vi/3JZ_D3ELwOQ/hqdefault.jpg" alt="Video 3" class="video-thumb" />
-        <h3 class="video-name">Mint Tea & Smiles</h3>
-        <p class="video-desc">Khadija shows how a smile can sweeten any moment.</p>
+        <div class="video-thumb-container">
+          <img src="./images/8.png" alt="Video 3" class="video-thumb" />
+          <img src="./images/play.png" alt="Play" class="play-button" />
+        </div>
+        <h3 class="video-title">Natural Smile</h3>
+        <p class="video-desc">Discover the secrets to creating effortless, natural-looking smiles every day.</p>
+        <div class="author-info">
+          <img src="./images/3.png" alt="Author" class="author-img" />
+          <span class="author-name">Bruce Walters</span>
+        </div>
+        <div class="video-rating">
+          <img src="./images/rating.png" alt="Rating" class="rating-stars" />
+          <span class="duration">8 min</span>
+        </div>
       </div>
       <div class="video-card">
-        <img src="https://img.youtube.com/vi/L_jWHffIx5E/hqdefault.jpg" alt="Video 4" class="video-thumb" />
-        <h3 class="video-name">Traffic Jam Laughs</h3>
-        <p class="video-desc">Fatima teaches you to keep smiling, even in traffic!</p>
+        <div class="video-thumb-container">
+          <img src="./images/9.png" alt="Video 4" class="video-thumb" />
+          <img src="./images/play.png" alt="Play" class="play-button" />
+        </div>
+        <h3 class="video-title">Happy Smile</h3>
+        <p class="video-desc">Perfect your joyful expressions with professional techniques for radiant smiles.</p>
+        <div class="author-info">
+          <img src="./images/4.png" alt="Author" class="author-img" />
+          <span class="author-name">Henry Hughes</span>
+        </div>
+        <div class="video-rating">
+          <img src="./images/rating.png" alt="Rating" class="rating-stars" />
+          <span class="duration">8 min</span>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- Membership Section -->
+  <section class="membership-section">
+    <h2 class="membership-title"><span class="highlight">Free</span> membership</h2>
+    <div class="membership-list">
+      <div class="membership-item">
+        <img src="./images/smile.png" alt="benefit" class="membership-icon" />
+        <h3>Expert Tutorials</h3>
+        <p>Access our comprehensive library of smile techniques taught by professional instructors.</p>
+      </div>
+      <div class="membership-item">
+        <img src="./images/smile.png" alt="benefit" class="membership-icon" />
+        <h3>Practice Sessions</h3>
+        <p>Join interactive practice sessions and receive personalized feedback on your progress.</p>
+      </div>
+      <div class="membership-item">
+        <img src="./images/smile.png" alt="benefit" class="membership-icon" />
+        <h3>Community Support</h3>
+        <p>Connect with fellow learners and share your smile journey in our supportive community.</p>
+      </div>
+      <div class="membership-item">
+        <img src="./images/smile.png" alt="benefit" class="membership-icon" />
+        <h3>Progress Tracking</h3>
+        <p>Monitor your improvement with detailed analytics and achievement milestones.</p>
+      </div>
+    </div>
+    <button class="register-btn">REGISTER FOR FREE</button>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <h2 class="faq-title">F.A.Q.</h2>
+    <div class="faq-container">
+      <div class="faq-column">
+        <div class="faq-item">
+          <h3>How does this work?</h3>
+          <p>Simply sign up for free and start learning with our step-by-step video tutorials. Practice at your own pace and track your progress as you master different smile techniques.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How long does it take to see results?</h3>
+          <p>Most students notice improvement within the first week of practice. With consistent daily practice of just 10-15 minutes, you'll see significant progress in your smile confidence.</p>
+        </div>
+      </div>
+      <div class="faq-column">
+        <div class="faq-item">
+          <h3>Do I need any special equipment?</h3>
+          <p>No special equipment needed! All you need is a mirror and your enthusiasm to learn. Our tutorials are designed to be practiced anywhere, anytime.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is there an age limit?</h3>
+          <p>SmileSchool is perfect for learners of all ages. Whether you're 8 or 80, our techniques are designed to help anyone improve their smile confidence and natural expression.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="./images/logo.png" alt="SmileSchool Logo" class="footer-logo-img" />
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link">📘</a>
+          <a href="#" class="social-link">🐦</a>
+          <a href="#" class="social-link">📷</a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p>&copy; smileschool 2020 | Developed by BIL LAHCEN</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
